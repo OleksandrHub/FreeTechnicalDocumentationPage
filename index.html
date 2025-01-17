@@ -12,7 +12,7 @@
         <section class="nav-link" id="">
             <a href="#introduction">Introduction</a>
             <a href="#algorithms">Algorithms</a>
-            <a href="#"></a>
+            <a href="#data-structures">Data Structures</a>
             <a href="#"></a>
             <a href="#"></a>
         </section>
@@ -51,14 +51,60 @@
                     </ul>
                     <h3>Linear Search</h3>
                     <p>Sequentially iterates through the list to find the target element.</p>
-                    <code></code>
+                    <code>
+                        from algorythmhelper.search import linear_search <br>
+                        arr = [4, 2, 8, 6] <br>
+                        target = 8 <br>
+                        result = linear_search(arr, target) <br>
+                        print(result)  # Output: 2 
+                    </code>
                 </li>
-                <li></li>
-                <li></li>
+                <li>
+                    <h2>Sorting</h2>
+                    <h3>QuickSort</h3>
+                    <p>Sorts a list using the "divide and conquer" method.</p>
+                    <code>
+                        from algorythmhelper.sorting import quick_sort <br>
+                        arr = [3, 1, 4, 1, 5] <br>
+                        result = quick_sort(arr) <br>
+                        print(result)  # Output: [1, 1, 3, 4, 5]
+                    </code>
+                    <h3>MergeSort</h3>
+                    <code>
+                        from algorythmhelper.sorting import merge_sort <br>
+                        arr = [10, -1, 2, 5] <br>
+                        result = merge_sort(arr) <br>
+                        print(result)  # Output: [-1, 2, 5, 10]
+                    </code>
+                </li>
+                <li>
+                    <h2>Graph Algorithms</h2>
+                    <h3>Breadth-First Search (BFS)</h3>
+                    <code>
+                        from algorythmhelper.graphs import bfs <br>
+                        graph = { <br>
+                            'A': ['B', 'C'], <br>
+                            'B': ['A', 'D', 'E'], <br>
+                            'C': ['A', 'F'], <br>
+                            'D': ['B'], <br>
+                            'E': ['B', 'F'], <br>
+                            'F': ['C', 'E'] <br>
+                        } <br>
+                        start = 'A' <br>
+                        result = bfs(graph, start) <br>
+                        print(result)  # Output: ['A', 'B', 'C', 'D', 'E', 'F']
+                    </code>
+                    <h3>Depth-First Search (DFS)</h3>
+                    <code>
+                        from algorythmhelper.graphs import dfs <br>
+                        result = dfs(graph, start) <br>
+                        print(result)  # Output: ['A', 'B', 'D', 'E', 'F', 'C']
+                    </code>
+                </li>
             </ol>
         </section>
-        <section class="main-section" id="">
-            <header></header>
+        <section class="main-section" id="data-structures">
+            <header>Data Structures</header>
         </section>
         <section class="main-section" id="">
             <header></header>

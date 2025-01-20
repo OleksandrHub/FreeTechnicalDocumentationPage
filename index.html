@@ -7,147 +7,157 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav id="navbar">
-        <header>Documentation for the Algorithms and Data Structures Library</header>
-        <section class="nav-link" id="">
-            <a href="#introduction">Introduction</a>
-            <a href="#algorithms">Algorithms</a>
-            <a href="#data-structures">Data Structures</a>
-            <a href="#frequently-asked-questions">Frequently Asked Questions (FAQ)</a>
-            <a href="#contacts-and-contributions">Contacts and Contributions</a>
-        </section>
-    </nav>
-    <main id="main-doc">
-        <section class="main-section" id="introduction">
-            <header>Introduction</header>
-            <p>AlgorythmHelper Library is designed to simplify working with algorithms and data structures. It enables quick implementation of popular algorithms and manipulation of data structures, optimizing the development process.</p>
-            <h2>Features:</h2>
-            <ul>
-                <li>Easy-to-use sorting, searching, and graph algorithms.</li>
-                <li>Convenient API for data structures (arrays, queues, stacks, trees).</li>
-                <li>Optimized implementations for fast execution.</li>
-            </ul>
-            <h2>Installation</h2>
-            <p>Install via Python Package Index (pip):</p>
-            <code>pip install algorythmhelper</code>
-        </section>
-        <section class="main-section" id="algorithms">
-            <header>Algorithms</header>
-            <ol>
-                <li>
-                    <h2>Searching</h2>
-                    <h3>Binary Search</h3>
-                    <p>Used to find an element in a sorted list.</p>
-                    <code>
-                        from algorythmhelper.search import binary_search <br>
-                        arr = [1, 3, 5, 7, 9] <br>
-                        target = 5 <br>
-                        result = binary_search(arr, target) <br>
-                        print(result)  # Output: 2
-                    </code>
-                    <ul>
-                        <li>Input: sorted list arr, target element target.</li>
-                        <li>Output: index of the element or -1 if not found.</li>
-                    </ul>
-                    <h3>Linear Search</h3>
-                    <p>Sequentially iterates through the list to find the target element.</p>
-                    <code>
-                        from algorythmhelper.search import linear_search <br>
-                        arr = [4, 2, 8, 6] <br>
-                        target = 8 <br>
-                        result = linear_search(arr, target) <br>
-                        print(result)  # Output: 2 
-                    </code>
-                </li>
-                <li>
-                    <h2>Sorting</h2>
-                    <h3>QuickSort</h3>
-                    <p>Sorts a list using the "divide and conquer" method.</p>
-                    <code>
-                        from algorythmhelper.sorting import quick_sort <br>
-                        arr = [3, 1, 4, 1, 5] <br>
-                        result = quick_sort(arr) <br>
-                        print(result)  # Output: [1, 1, 3, 4, 5]
-                    </code>
-                    <h3>MergeSort</h3>
-                    <code>
-                        from algorythmhelper.sorting import merge_sort <br>
-                        arr = [10, -1, 2, 5] <br>
-                        result = merge_sort(arr) <br>
-                        print(result)  # Output: [-1, 2, 5, 10]
-                    </code>
-                </li>
-                <li>
-                    <h2>Graph Algorithms</h2>
-                    <h3>Breadth-First Search (BFS)</h3>
-                    <code>
-                        from algorythmhelper.graphs import bfs <br>
-                        graph = { <br>
-                            'A': ['B', 'C'], <br>
-                            'B': ['A', 'D', 'E'], <br>
-                            'C': ['A', 'F'], <br>
-                            'D': ['B'], <br>
-                            'E': ['B', 'F'], <br>
-                            'F': ['C', 'E'] <br>
-                        } <br>
-                        start = 'A' <br>
-                        result = bfs(graph, start) <br>
-                        print(result)  # Output: ['A', 'B', 'C', 'D', 'E', 'F']
-                    </code>
-                    <h3>Depth-First Search (DFS)</h3>
-                    <code>
-                        from algorythmhelper.graphs import dfs <br>
-                        result = dfs(graph, start) <br>
-                        print(result)  # Output: ['A', 'B', 'D', 'E', 'F', 'C']
-                    </code>
-                </li>
-            </ol>
-        </section>
-        <section class="main-section" id="data-structures">
-            <header>Data Structures</header>
-            <h3>Queue</h3>
-            <code>
-                from algorythmhelper.structures import Queue <br>
-                queue = Queue() <br>
-                queue.enqueue(1) <br>
-                queue.enqueue(2) <br>
-                print(queue.dequeue())  # Output: 1 <br>
-                print(queue.is_empty())  # Output: False
-            </code>
-            <h3>Stack</h3>
-            <code>
-                from algorythmhelper.structures import Stack <br>
-                stack = Stack() <br>
-                stack.push(10) <br>
-                stack.push(20) <br>
-                print(stack.pop())  # Output: 20 <br>
-                print(stack.peek())  # Output: 10
-            </code>
-            <h3>Binary Tree</h3>
-            <code>
-                from algorythmhelper.structures import BinaryTree <br>
-                tree = BinaryTree() <br>
-                tree.insert(5) <br>
-                tree.insert(3) <br>
-                tree.insert(7) <br>
-                print(tree.inorder_traversal())  # Output: [3, 5, 7]
-            </code>
-        </section>
-        <section class="main-section" id="frequently-asked-questions">
-            <header>Frequently Asked Questions (FAQ)</header>
-            <p>Q: Can the library handle large datasets?</p>
-            <p>A: Yes, the algorithm implementations are optimized for processing large amounts of data.</p>
-            <p>Q: How can I report an issue?</p>
-            <p>A: Create an issue in the <a href="https://github.com/algorythmhelper">GitHub repository.</a></p>
-        </section>
-        <section class="main-section" id="contacts-and-contributions">
-            <header>Contacts and Contributions</header>
-            <ul>
-                <li>GitHub: <a href="github.com/algorythmhelper">github.com/algorythmhelper</a></li>
-                <li>Email: <a href="mailto:support@algorythmhelper.com">support@algorythmhelper.com</a></li>            
-            </ul>
-            <p>If you have ideas for improvements, please send your suggestions via a Pull Request or contact us!</p>
-        </section>
-    </main>
+    <div class="container">
+        <nav id="navbar">
+            <header>Documentation for the Algorithms and Data Structures Library</header>
+            <section>
+                <a class="nav-link" href="#introduction">Introduction</a>
+                <a class="nav-link" href="#algorithms">Algorithms</a>
+                <a class="nav-link" href="#data_structures">Data Structures</a>
+                <a class="nav-link" href="#frequently_asked_questions">Frequently Asked Questions</a>
+                <a class="nav-link" href="#contacts_and_contributions">Contacts and Contributions</a>
+            </section>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="introduction">
+                <header>Introduction</header>
+                <p>AlgorythmHelper Library is designed to simplify working with algorithms and data structures. It enables quick implementation of popular algorithms and manipulation of data structures, optimizing the development process.</p>
+                <h2>Features:</h2>
+                <ul>
+                    <li>Easy-to-use sorting, searching, and graph algorithms.</li>
+                    <li>Convenient API for data structures (arrays, queues, stacks, trees).</li>
+                    <li>Optimized implementations for fast execution.</li>
+                </ul>
+                <h2>Installation</h2>
+                <p>Install via Python Package Index (pip):</p>
+                <code>pip install algorythmhelper</code>
+                <hr>
+            </section>
+            <section class="main-section" id="algorithms">
+                <header>Algorithms</header>
+                <ol>
+                    <li>
+                        <h2>Searching</h2>
+                        <h3>Binary Search</h3>
+                        <p>Used to find an element in a sorted list.</p>
+                        <code>
+                            from algorythmhelper.search import binary_search <br>
+                            arr = [1, 3, 5, 7, 9] <br>
+                            target = 5 <br>
+                            result = binary_search(arr, target) <br>
+                            print(result)  # Output: 2
+                        </code>
+                        <ul>
+                            <li>Input: sorted list arr, target element target.</li>
+                            <li>Output: index of the element or -1 if not found.</li>
+                        </ul>
+                        <h3>Linear Search</h3>
+                        <p>Sequentially iterates through the list to find the target element.</p>
+                        <code>
+                            from algorythmhelper.search import linear_search <br>
+                            arr = [4, 2, 8, 6] <br>
+                            target = 8 <br>
+                            result = linear_search(arr, target) <br>
+                            print(result)  # Output: 2 
+                        </code>
+                        <hr>
+                    </li>
+                    <li>
+                        <h2>Sorting</h2>
+                        <h3>QuickSort</h3>
+                        <p>Sorts a list using the "divide and conquer" method.</p>
+                        <code>
+                            from algorythmhelper.sorting import quick_sort <br>
+                            arr = [3, 1, 4, 1, 5] <br>
+                            result = quick_sort(arr) <br>
+                            print(result)  # Output: [1, 1, 3, 4, 5]
+                        </code>
+                        <h3>MergeSort</h3>
+                        <code>
+                            from algorythmhelper.sorting import merge_sort <br>
+                            arr = [10, -1, 2, 5] <br>
+                            result = merge_sort(arr) <br>
+                            print(result)  # Output: [-1, 2, 5, 10]
+                        </code>
+                        <hr>
+                    </li>
+                    <li>
+                        <h2>Graph Algorithms</h2>
+                        <h3>Breadth-First Search (BFS)</h3>
+                        <code>
+                            from algorythmhelper.graphs import bfs <br>
+                            graph = { <br>
+                                'A': ['B', 'C'], <br>
+                                'B': ['A', 'D', 'E'], <br>
+                                'C': ['A', 'F'], <br>
+                                'D': ['B'], <br>
+                                'E': ['B', 'F'], <br>
+                                'F': ['C', 'E'] <br>
+                            } <br>
+                            start = 'A' <br>
+                            result = bfs(graph, start) <br>
+                            print(result)  # Output: ['A', 'B', 'C', 'D', 'E', 'F']
+                        </code>
+                        <h3>Depth-First Search (DFS)</h3>
+                        <code>
+                            from algorythmhelper.graphs import dfs <br>
+                            result = dfs(graph, start) <br>
+                            print(result)  # Output: ['A', 'B', 'D', 'E', 'F', 'C']
+                        </code>
+                        <hr>
+                    </li>
+                </ol>
+            </section>
+            <section class="main-section" id="data_structures">
+                <header>Data Structures</header>
+                <h3>Queue</h3>
+                <code>
+                    from algorythmhelper.structures import Queue <br>
+                    queue = Queue() <br>
+                    queue.enqueue(1) <br>
+                    queue.enqueue(2) <br>
+                    print(queue.dequeue())  # Output: 1 <br>
+                    print(queue.is_empty())  # Output: False
+                </code>
+                <hr>
+                <h3>Stack</h3>
+                <code>
+                    from algorythmhelper.structures import Stack <br>
+                    stack = Stack() <br>
+                    stack.push(10) <br>
+                    stack.push(20) <br>
+                    print(stack.pop())  # Output: 20 <br>
+                    print(stack.peek())  # Output: 10
+                </code>
+                <hr>
+                <h3>Binary Tree</h3>
+                <code>
+                    from algorythmhelper.structures import BinaryTree <br>
+                    tree = BinaryTree() <br>
+                    tree.insert(5) <br>
+                    tree.insert(3) <br>
+                    tree.insert(7) <br>
+                    print(tree.inorder_traversal())  # Output: [3, 5, 7]
+                </code>
+                <hr>
+            </section>
+            <section class="main-section" id="frequently_asked_questions">
+                <header>Frequently Asked Questions</header>
+                <p>Q: Can the library handle large datasets?</p>
+                <p>A: Yes, the algorithm implementations are optimized for processing large amounts of data.</p>
+                <p>Q: How can I report an issue?</p>
+                <p>A: Create an issue in the <a href="https://github.com/algorythmhelper">GitHub repository.</a></p>
+                <hr>
+            </section>
+            <section class="main-section" id="contacts_and_contributions">
+                <header>Contacts and Contributions</header>
+                <ul>
+                    <li>GitHub: <a href="github.com/algorythmhelper">github.com/algorythmhelper</a></li>
+                    <li>Email: <a href="mailto:support@algorythmhelper.com">support@algorythmhelper.com</a></li>            
+                </ul>
+                <p>If you have ideas for improvements, please send your suggestions via a Pull Request or contact us!</p>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
